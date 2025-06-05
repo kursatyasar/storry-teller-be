@@ -1,0 +1,46 @@
+# Development Environment Configuration
+
+# Server configuration
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+
+# Spring configuration
+spring:
+  application:
+    name: story-teller-be
+
+  # Database configuration
+  datasource:
+    url: jdbc:postgresql://host.docker.internal:5432/localdb
+    username: yasarku
+    password: 6116131
+    driver-class-name: org.postgresql.Driver
+
+  # JPA/Hibernate configuration
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+  # PostgreSQL Configuration
+  # No console configuration needed for PostgreSQL
+
+# Logging configuration
+logging:
+  level:
+    root: INFO
+    com.yasarku: DEBUG
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+
+# Application-specific properties
+app:
+  environment: development
+  feature-flags:
+    enable-swagger: true

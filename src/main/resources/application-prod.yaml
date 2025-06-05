@@ -1,0 +1,76 @@
+# Production Environment Configuration
+
+# Server configuration
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+  tomcat:
+    max-threads: 200
+    min-spare-threads: 20
+    max-connections: 10000
+    connection-timeout: 5000
+
+# Spring configuration
+spring:
+  application:
+    name: story-teller-be
+
+  # Database configuration - using placeholder values that would be replaced by environment variables
+  # Note: To use PostgreSQL in production, add the following dependency to pom.xml:
+  # <dependency>
+  #   <groupId>org.postgresql</groupId>
+  #   <artifactId>postgresql</artifactId>
+  #   <scope>runtime</scope>
+  # </dependency>
+  datasource:
+    url: ${JDBC_DATABASE_URL}
+    username: ${JDBC_DATABASE_USERNAME}
+    password: ${JDBC_DATABASE_PASSWORD}
+    driver-class-name: org.h2.Driver # Using H2 for now, change to org.postgresql.Driver when PostgreSQL dependency is added
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 5
+      idle-timeout: 600000
+      connection-timeout: 30000
+
+  # JPA/Hibernate configuration
+  jpa:
+    # Note: Change to org.hibernate.dialect.PostgreSQLDialect when PostgreSQL dependency is added
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+    properties:
+      hibernate:
+        jdbc.batch_size: 50
+        order_inserts: true
+        order_updates: true
+
+  # Disable H2 Console in production
+  h2:
+    console:
+      enabled: false
+
+# Logging configuration
+logging:
+  level:
+    root: WARN
+    com.yasarku: INFO
+  file:
+    name: /var/log/story-teller/application-prod.log
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+
+# Application-specific properties
+app:
+  environment: production
+  feature-flags:
+    enable-swagger: false
+  security:
+    jwt:
+      secret: ${JWT_SECRET}
+      expiration: 86400000  # 24 hours in milliseconds
+  cache:
+    ttl: 3600  # 1 hour in seconds

@@ -1,0 +1,309 @@
+2025-06-05T22:45:36.851+03:00  INFO 18108 --- [story-teller-be] [main] c.y.s.StoryTellerBeApplication           : Starting StoryTellerBeApplication using Java 21.0.7 with PID 18108 (C:\Users\kursh\Desktop\fresh start\story-teller-be\target\classes started by kursh in C:\Users\kursh\Desktop\fresh start\story-teller-be)
+2025-06-05T22:45:36.856+03:00 DEBUG 18108 --- [story-teller-be] [main] c.y.s.StoryTellerBeApplication           : Running with Spring Boot v3.5.0, Spring v6.2.7
+2025-06-05T22:45:36.857+03:00  INFO 18108 --- [story-teller-be] [main] c.y.s.StoryTellerBeApplication           : The following 1 profile is active: "local"
+2025-06-05T22:45:37.478+03:00  INFO 18108 --- [story-teller-be] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-05T22:45:37.497+03:00  INFO 18108 --- [story-teller-be] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 0 JPA repository interfaces.
+2025-06-05T22:45:37.895+03:00  INFO 18108 --- [story-teller-be] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-06-05T22:45:37.910+03:00  INFO 18108 --- [story-teller-be] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-05T22:45:37.910+03:00  INFO 18108 --- [story-teller-be] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-05T22:45:37.970+03:00  INFO 18108 --- [story-teller-be] [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2025-06-05T22:45:37.971+03:00  INFO 18108 --- [story-teller-be] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1068 ms
+2025-06-05T22:45:38.133+03:00  INFO 18108 --- [story-teller-be] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-05T22:45:38.202+03:00  INFO 18108 --- [story-teller-be] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-06-05T22:45:38.237+03:00  INFO 18108 --- [story-teller-be] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-05T22:45:38.563+03:00  INFO 18108 --- [story-teller-be] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-05T22:45:38.599+03:00  INFO 18108 --- [story-teller-be] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-05T22:45:39.646+03:00  WARN 18108 --- [story-teller-be] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 08001
+2025-06-05T22:45:39.646+03:00 ERROR 18108 --- [story-teller-be] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+2025-06-05T22:45:39.647+03:00  WARN 18108 --- [story-teller-be] [main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
+
+org.hibernate.exception.JDBCConnectionException: unable to obtain isolated JDBC connection [Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:100) ~[hibernate-core-6.6.15.Final.jar:6.6.15.Final]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58) ~[hibernate-core-6.6.15.Final.jar:6.6.15.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108) ~[hibernate-core-6.6.15.Final.jar:6.6.15.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94) ~[hibernate-core-6.6.15.Final.jar:6.6.15.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:116) ~[hibernate-core-6.6.15.Final.jar:6.6.15.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:336) ~[hibernate-core-6.6.15.Final.jar:6.6.15.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:129) ~[hibernate-core-6.6.15.Final.jar:6.6.15.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:81) ~[hibernate-core-6.6.15.Final.jar:6.6.15.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130) ~[hibernate-core-6.6.15.Final.jar:6.6.15.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-6.6.15.Final.jar:6.6.15.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238) ~[hibernate-core-6.6.15.Final.jar:6.6.15.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) ~[hibernate-core-6.6.15.Final.jar:6.6.15.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45) ~[hibernate-core-6.6.15.Final.jar:6.6.15.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:226) ~[hibernate-core-6.6.15.Final.jar:6.6.15.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:194) ~[hibernate-core-6.6.15.Final.jar:6.6.15.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171) ~[hibernate-core-6.6.15.Final.jar:6.6.15.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1442) ~[hibernate-core-6.6.15.Final.jar:6.6.15.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1513) ~[hibernate-core-6.6.15.Final.jar:6.6.15.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.2.7.jar:6.2.7]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.2.7.jar:6.2.7]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419) ~[spring-orm-6.2.7.jar:6.2.7]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400) ~[spring-orm-6.2.7.jar:6.2.7]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970) ~[spring-context-6.2.7.jar:6.2.7]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.7.jar:6.2.7]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.0.jar:3.5.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753) ~[spring-boot-3.5.0.jar:3.5.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.0.jar:3.5.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.0.jar:3.5.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1362) ~[spring-boot-3.5.0.jar:3.5.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1351) ~[spring-boot-3.5.0.jar:3.5.0]
+	at com.yasarku.story_teller_be.StoryTellerBeApplication.main(StoryTellerBeApplication.java:10) ~[classes/:na]
+Caused by: org.postgresql.util.PSQLException: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:352) ~[postgresql-42.7.5.jar:42.7.5]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54) ~[postgresql-42.7.5.jar:42.7.5]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:273) ~[postgresql-42.7.5.jar:42.7.5]
+	at org.postgresql.Driver.makeConnection(Driver.java:446) ~[postgresql-42.7.5.jar:42.7.5]
+	at org.postgresql.Driver.connect(Driver.java:298) ~[postgresql-42.7.5.jar:42.7.5]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:139) ~[HikariCP-6.3.0.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:368) ~[HikariCP-6.3.0.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:205) ~[HikariCP-6.3.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:483) ~[HikariCP-6.3.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:571) ~[HikariCP-6.3.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:101) ~[HikariCP-6.3.0.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111) ~[HikariCP-6.3.0.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:126) ~[hibernate-core-6.6.15.Final.jar:6.6.15.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:483) ~[hibernate-core-6.6.15.Final.jar:6.6.15.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61) ~[hibernate-core-6.6.15.Final.jar:6.6.15.Final]
+	... 35 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:751) ~[na:na]
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:260) ~[postgresql-42.7.5.jar:42.7.5]
+	at org.postgresql.core.PGStream.<init>(PGStream.java:121) ~[postgresql-42.7.5.jar:42.7.5]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:140) ~[postgresql-42.7.5.jar:42.7.5]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:268) ~[postgresql-42.7.5.jar:42.7.5]
+	... 49 common frames omitted
+
+2025-06-05T22:45:39.684+03:00  WARN 18108 --- [story-teller-be] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-06-05T22:45:39.695+03:00  INFO 18108 --- [story-teller-be] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (null)']
+	Database driver: undefined/unknown
+	Database version: 12.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-06-05T22:45:40.107+03:00  INFO 18108 --- [story-teller-be] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-05T22:45:40.113+03:00  INFO 18108 --- [story-teller-be] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-05T22:45:40.165+03:00  WARN 18108 --- [story-teller-be] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-05T22:45:40.545+03:00  INFO 18108 --- [story-teller-be] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/api'
+2025-06-05T22:45:40.552+03:00  INFO 18108 --- [story-teller-be] [main] c.y.s.StoryTellerBeApplication           : Started StoryTellerBeApplication in 4.534 seconds (process running for 8.265)
+2025-06-05T22:47:51.262+03:00  INFO 18108 --- [story-teller-be] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-05T22:47:51.267+03:00  INFO 18108 --- [story-teller-be] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-05T22:47:51.272+03:00  INFO 18108 --- [story-teller-be] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-05T22:59:52.617+03:00  INFO 10372 --- [story-teller-be] [main] c.y.s.StoryTellerBeApplication           : Starting StoryTellerBeApplication using Java 21.0.7 with PID 10372 (C:\Users\kursh\Desktop\fresh start\story-teller-be\target\classes started by kursh in C:\Users\kursh\Desktop\fresh start\story-teller-be)
+2025-06-05T22:59:52.621+03:00 DEBUG 10372 --- [story-teller-be] [main] c.y.s.StoryTellerBeApplication           : Running with Spring Boot v3.5.0, Spring v6.2.7
+2025-06-05T22:59:52.622+03:00  INFO 10372 --- [story-teller-be] [main] c.y.s.StoryTellerBeApplication           : The following 1 profile is active: "local"
+2025-06-05T22:59:53.446+03:00  INFO 10372 --- [story-teller-be] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-05T22:59:53.468+03:00  INFO 10372 --- [story-teller-be] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 0 JPA repository interfaces.
+2025-06-05T22:59:54.135+03:00  INFO 10372 --- [story-teller-be] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-06-05T22:59:54.154+03:00  INFO 10372 --- [story-teller-be] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-05T22:59:54.155+03:00  INFO 10372 --- [story-teller-be] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-05T22:59:54.231+03:00  INFO 10372 --- [story-teller-be] [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2025-06-05T22:59:54.231+03:00  INFO 10372 --- [story-teller-be] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1453 ms
+2025-06-05T22:59:54.477+03:00  INFO 10372 --- [story-teller-be] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-05T22:59:54.557+03:00  INFO 10372 --- [story-teller-be] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-06-05T22:59:54.601+03:00  INFO 10372 --- [story-teller-be] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-05T22:59:54.982+03:00  INFO 10372 --- [story-teller-be] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-05T22:59:55.022+03:00  INFO 10372 --- [story-teller-be] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-05T22:59:55.210+03:00  INFO 10372 --- [story-teller-be] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@48b3b1b8
+2025-06-05T22:59:55.213+03:00  INFO 10372 --- [story-teller-be] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-05T22:59:55.253+03:00  WARN 10372 --- [story-teller-be] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-06-05T22:59:55.284+03:00  INFO 10372 --- [story-teller-be] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 16.9
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-06-05T22:59:55.725+03:00  INFO 10372 --- [story-teller-be] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-05T22:59:55.731+03:00  INFO 10372 --- [story-teller-be] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-05T22:59:55.780+03:00  WARN 10372 --- [story-teller-be] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-05T22:59:56.214+03:00  INFO 10372 --- [story-teller-be] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/api'
+2025-06-05T22:59:56.223+03:00  INFO 10372 --- [story-teller-be] [main] c.y.s.StoryTellerBeApplication           : Started StoryTellerBeApplication in 4.345 seconds (process running for 5.839)
+2025-06-05T23:13:31.989+03:00  INFO 10372 --- [story-teller-be] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-05T23:13:31.996+03:00  INFO 10372 --- [story-teller-be] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-05T23:13:32.002+03:00  INFO 10372 --- [story-teller-be] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-05T23:13:32.004+03:00  INFO 10372 --- [story-teller-be] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-05T23:13:32.010+03:00  INFO 10372 --- [story-teller-be] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-05T23:13:38.375+03:00  INFO 12876 --- [story-teller-be] [main] c.y.s.StoryTellerBeApplication           : Starting StoryTellerBeApplication using Java 21.0.7 with PID 12876 (C:\Users\kursh\Desktop\fresh start\story-teller-be\target\classes started by kursh in C:\Users\kursh\Desktop\fresh start\story-teller-be)
+2025-06-05T23:13:38.377+03:00 DEBUG 12876 --- [story-teller-be] [main] c.y.s.StoryTellerBeApplication           : Running with Spring Boot v3.5.0, Spring v6.2.7
+2025-06-05T23:13:38.378+03:00  INFO 12876 --- [story-teller-be] [main] c.y.s.StoryTellerBeApplication           : The following 1 profile is active: "local"
+2025-06-05T23:13:38.965+03:00  INFO 12876 --- [story-teller-be] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-05T23:13:39.053+03:00  INFO 12876 --- [story-teller-be] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 70 ms. Found 6 JPA repository interfaces.
+2025-06-05T23:13:39.752+03:00  INFO 12876 --- [story-teller-be] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-06-05T23:13:39.769+03:00  INFO 12876 --- [story-teller-be] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-05T23:13:39.769+03:00  INFO 12876 --- [story-teller-be] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-05T23:13:39.826+03:00  INFO 12876 --- [story-teller-be] [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2025-06-05T23:13:39.827+03:00  INFO 12876 --- [story-teller-be] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1373 ms
+2025-06-05T23:13:40.031+03:00  INFO 12876 --- [story-teller-be] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-05T23:13:40.112+03:00  INFO 12876 --- [story-teller-be] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-06-05T23:13:40.154+03:00  INFO 12876 --- [story-teller-be] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-05T23:13:40.519+03:00  INFO 12876 --- [story-teller-be] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-05T23:13:40.559+03:00  INFO 12876 --- [story-teller-be] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-05T23:13:40.751+03:00  INFO 12876 --- [story-teller-be] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@563843f1
+2025-06-05T23:13:40.754+03:00  INFO 12876 --- [story-teller-be] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-05T23:13:40.801+03:00  WARN 12876 --- [story-teller-be] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-06-05T23:13:40.824+03:00  INFO 12876 --- [story-teller-be] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 16.9
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-06-05T23:13:42.024+03:00  INFO 12876 --- [story-teller-be] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-05T23:13:42.090+03:00 DEBUG 12876 --- [story-teller-be] [main] org.hibernate.SQL                        : 
+    create table "story-teller".characters (
+        id bigint generated by default as identity,
+        character_traits varchar(500),
+        description varchar(1000),
+        name varchar(255) not null,
+        primary key (id)
+    )
+2025-06-05T23:13:42.111+03:00 DEBUG 12876 --- [story-teller-be] [main] org.hibernate.SQL                        : 
+    create table "story-teller".images (
+        id bigint generated by default as identity,
+        generation_prompt varchar(1000),
+        image_alt varchar(255),
+        image_url varchar(255) not null,
+        story_page_id bigint,
+        primary key (id)
+    )
+2025-06-05T23:13:42.119+03:00 DEBUG 12876 --- [story-teller-be] [main] org.hibernate.SQL                        : 
+    create table "story-teller".stories (
+        id bigint generated by default as identity,
+        description varchar(1000),
+        target_age_group varchar(255),
+        theme varchar(255) not null,
+        title varchar(255) not null,
+        creator_id bigint,
+        primary key (id)
+    )
+2025-06-05T23:13:42.127+03:00 DEBUG 12876 --- [story-teller-be] [main] org.hibernate.SQL                        : 
+    create table "story-teller".story_characters (
+        story_id bigint not null,
+        character_id bigint not null,
+        primary key (story_id, character_id)
+    )
+2025-06-05T23:13:42.132+03:00 DEBUG 12876 --- [story-teller-be] [main] org.hibernate.SQL                        : 
+    create table "story-teller".story_pages (
+        id bigint generated by default as identity,
+        content varchar(2000) not null,
+        image_description varchar(1000),
+        page_number integer not null,
+        story_id bigint not null,
+        primary key (id)
+    )
+2025-06-05T23:13:42.139+03:00 DEBUG 12876 --- [story-teller-be] [main] org.hibernate.SQL                        : 
+    create table "story-teller".users (
+        id bigint generated by default as identity,
+        email varchar(255) not null,
+        full_name varchar(255),
+        password varchar(255) not null,
+        user_role varchar(255) check (user_role in ('PARENT','CONTENT_MANAGER','ADMIN')),
+        username varchar(255) not null,
+        primary key (id)
+    )
+2025-06-05T23:13:42.147+03:00 DEBUG 12876 --- [story-teller-be] [main] org.hibernate.SQL                        : 
+    create table "story-teller".voices (
+        id bigint generated by default as identity,
+        audio_url varchar(255) not null,
+        duration_seconds integer,
+        voice_type varchar(255),
+        story_page_id bigint,
+        primary key (id)
+    )
+2025-06-05T23:13:42.156+03:00 DEBUG 12876 --- [story-teller-be] [main] org.hibernate.SQL                        : 
+    alter table if exists "story-teller".images 
+       drop constraint if exists UKdmyc8iie9ke5xtlu2mrefhkhh
+2025-06-05T23:13:42.160+03:00  WARN 12876 --- [story-teller-be] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2025-06-05T23:13:42.160+03:00  WARN 12876 --- [story-teller-be] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : constraint "ukdmyc8iie9ke5xtlu2mrefhkhh" of relation "images" does not exist, skipping
+2025-06-05T23:13:42.160+03:00 DEBUG 12876 --- [story-teller-be] [main] org.hibernate.SQL                        : 
+    alter table if exists "story-teller".images 
+       add constraint UKdmyc8iie9ke5xtlu2mrefhkhh unique (story_page_id)
+2025-06-05T23:13:42.165+03:00 DEBUG 12876 --- [story-teller-be] [main] org.hibernate.SQL                        : 
+    alter table if exists "story-teller".users 
+       drop constraint if exists UK6dotkott2kjsp8vw4d0m25fb7
+2025-06-05T23:13:42.167+03:00  WARN 12876 --- [story-teller-be] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2025-06-05T23:13:42.168+03:00  WARN 12876 --- [story-teller-be] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : constraint "uk6dotkott2kjsp8vw4d0m25fb7" of relation "users" does not exist, skipping
+2025-06-05T23:13:42.169+03:00 DEBUG 12876 --- [story-teller-be] [main] org.hibernate.SQL                        : 
+    alter table if exists "story-teller".users 
+       add constraint UK6dotkott2kjsp8vw4d0m25fb7 unique (email)
+2025-06-05T23:13:42.174+03:00 DEBUG 12876 --- [story-teller-be] [main] org.hibernate.SQL                        : 
+    alter table if exists "story-teller".users 
+       drop constraint if exists UKr43af9ap4edm43mmtq01oddj6
+2025-06-05T23:13:42.176+03:00  WARN 12876 --- [story-teller-be] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2025-06-05T23:13:42.177+03:00  WARN 12876 --- [story-teller-be] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : constraint "ukr43af9ap4edm43mmtq01oddj6" of relation "users" does not exist, skipping
+2025-06-05T23:13:42.177+03:00 DEBUG 12876 --- [story-teller-be] [main] org.hibernate.SQL                        : 
+    alter table if exists "story-teller".users 
+       add constraint UKr43af9ap4edm43mmtq01oddj6 unique (username)
+2025-06-05T23:13:42.181+03:00 DEBUG 12876 --- [story-teller-be] [main] org.hibernate.SQL                        : 
+    alter table if exists "story-teller".voices 
+       drop constraint if exists UK5k7pqdxq1c5l3xm1yifvvhwbb
+2025-06-05T23:13:42.183+03:00  WARN 12876 --- [story-teller-be] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2025-06-05T23:13:42.183+03:00  WARN 12876 --- [story-teller-be] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : constraint "uk5k7pqdxq1c5l3xm1yifvvhwbb" of relation "voices" does not exist, skipping
+2025-06-05T23:13:42.184+03:00 DEBUG 12876 --- [story-teller-be] [main] org.hibernate.SQL                        : 
+    alter table if exists "story-teller".voices 
+       add constraint UK5k7pqdxq1c5l3xm1yifvvhwbb unique (story_page_id)
+2025-06-05T23:13:42.189+03:00 DEBUG 12876 --- [story-teller-be] [main] org.hibernate.SQL                        : 
+    alter table if exists "story-teller".images 
+       add constraint FKea8yd1raj1imsu10eo1t272dv 
+       foreign key (story_page_id) 
+       references "story-teller".story_pages
+2025-06-05T23:13:42.196+03:00 DEBUG 12876 --- [story-teller-be] [main] org.hibernate.SQL                        : 
+    alter table if exists "story-teller".stories 
+       add constraint FKa23e31ej0204qqy0k15i0vl21 
+       foreign key (creator_id) 
+       references "story-teller".users
+2025-06-05T23:13:42.199+03:00 DEBUG 12876 --- [story-teller-be] [main] org.hibernate.SQL                        : 
+    alter table if exists "story-teller".story_characters 
+       add constraint FK281lqrl73seh1jhuf9sdwn2f0 
+       foreign key (character_id) 
+       references "story-teller".characters
+2025-06-05T23:13:42.203+03:00 DEBUG 12876 --- [story-teller-be] [main] org.hibernate.SQL                        : 
+    alter table if exists "story-teller".story_characters 
+       add constraint FK98y7pq5oec08uuic4g0ch3w66 
+       foreign key (story_id) 
+       references "story-teller".stories
+2025-06-05T23:13:42.206+03:00 DEBUG 12876 --- [story-teller-be] [main] org.hibernate.SQL                        : 
+    alter table if exists "story-teller".story_pages 
+       add constraint FKgeny98rd2ejalulaia1ddkteo 
+       foreign key (story_id) 
+       references "story-teller".stories
+2025-06-05T23:13:42.210+03:00 DEBUG 12876 --- [story-teller-be] [main] org.hibernate.SQL                        : 
+    alter table if exists "story-teller".voices 
+       add constraint FK5ibu4aaalap4ml7c3psx6dqf4 
+       foreign key (story_page_id) 
+       references "story-teller".story_pages
+2025-06-05T23:13:42.215+03:00  INFO 12876 --- [story-teller-be] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-05T23:13:42.673+03:00  WARN 12876 --- [story-teller-be] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-05T23:13:43.041+03:00  INFO 12876 --- [story-teller-be] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/api'
+2025-06-05T23:13:43.059+03:00  INFO 12876 --- [story-teller-be] [main] c.y.s.StoryTellerBeApplication           : Started StoryTellerBeApplication in 5.524 seconds (process running for 6.803)
+2025-06-05T23:19:26.829+03:00  INFO 12876 --- [story-teller-be] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-05T23:19:26.830+03:00  INFO 12876 --- [story-teller-be] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-05T23:19:26.831+03:00  INFO 12876 --- [story-teller-be] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-06-05T23:19:27.095+03:00 DEBUG 12876 --- [story-teller-be] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        "story-teller"
+        .users (
+            email, full_name, password, user_role, username
+        ) 
+    values
+        (?, ?, ?, ?, ?)
