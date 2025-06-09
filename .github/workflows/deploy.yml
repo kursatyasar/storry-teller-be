@@ -42,16 +42,3 @@ jobs:
           context: .
           push: true
           tags: ${{ env.IMAGE_NAME }}
-
-      - name: Deploy to Minikube via SSH
-        uses: appleboy/ssh-action@v1.0.3
-        with:
-          host: ${{ secrets.MINIKUBE_HOST }}
-          username: ${{ secrets.MINIKUBE_USER }}
-          key: ${{ secrets.MINIKUBE_SSH_KEY }}
-          script: |
-            echo "Pulling latest image..."
-            docker pull ${{ env.IMAGE_NAME }}
-
-            echo "Applying Kubernetes deployment..."
-            kubectl apply -f ~/app/k8s/deployment.yaml
