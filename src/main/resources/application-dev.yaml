@@ -27,7 +27,7 @@ spring:
     properties:
       hibernate:
         format_sql: true
-        default_schema: story-teller
+        default_schema: story_teller
 
   # PostgreSQL Configuration
   # No console configuration needed for PostgreSQL
