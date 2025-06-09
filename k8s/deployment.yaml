@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: story-teller-be
+  labels:
+    app: story-teller-be
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: story-teller-be
+  template:
+    metadata:
+      labels:
+        app: story-teller-be
+    spec:
+      containers:
+        - name: story-teller-be
+          image: ghcr.io/kursatyasar/story-teller-be:latest
+          ports:
+            - containerPort: 8080
