@@ -14,7 +14,7 @@ VOLUME /var/log/story-teller
 COPY target/story-teller-be-0.0.1-SNAPSHOT.jar app.jar
 
 # Environment variables
-ENV SPRING_PROFILES_ACTIVE=prod
+ENV SPRING_PROFILES_ACTIVE=dev
 # Database connection details should be provided at runtime
 # ENV JDBC_DATABASE_URL=
 # ENV JDBC_DATABASE_USERNAME=
