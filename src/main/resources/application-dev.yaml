@@ -13,9 +13,9 @@ spring:
 
   # Database configuration
   datasource:
-    url: jdbc:postgresql://host.docker.internal:5432/localdb
-    username: yasarku
-    password: 6116131
+    url: jdbc:postgresql://postgres:5432/testdb
+    username: ky
+    password: Ky6116131.
     driver-class-name: org.postgresql.Driver
 
   # JPA/Hibernate configuration
